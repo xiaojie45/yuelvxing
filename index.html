@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta content="IE=edge" http-equiv="X-UA-Compatible">
+                <meta content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no" name="viewport"/>
+                <title>
+                    悦旅行
+                </title>
+                <link href="css/base.css" rel="stylesheet">
+                    <link href="fonts/iconfont.css" rel="stylesheet">
+                        <style media="screen" type="text/css">
+                        </style>
+                    </link>
+                </link>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <!-- 导航栏 -->
+        <header class="nav">
+            <div class="container1">
+                <a class="nav-logo" href="javascript:void(0)">
+                    <img alt="" src="images/logo.png"/>
+                </a>
+                <a class="visible-xs xs-btn" href="javascript:void(0)">
+                <i class="iconfont icon-sanheng"></i>
+                </a>
+                <div class="nav-bar">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="javascript:void(0)">
+                                探美食
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                城里逛
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                趣城外
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                周刊
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                电台
+                            </a>
+                        </li>
+                        <li class="more hidden-sm hidden-xs">
+                            <a href="javascript:void(0)">
+                                更多
+                                <i class="iconfont icon-triangle-down">
+                                </i>
+                                <ul class="nav-list-more" style="display: none;">
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            我们爱明信片
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            欲望清单
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            视界
+                                        </a>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav-login">
+                        <li>
+                            <button class="nav-login-weibo" title="用新浪微博登陆" type="button">
+                                <img alt="" height="16" src="images/weibo.png" width="20"/>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="nav-login-qq" title="用qq登陆" type="button">
+                                <img alt="" height="16" src="images/qq.png" width="16"/>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="nav-login-login" title="登陆悦旅行" type="button">
+                                登陆
+                            </button>
+                        </li>
+                        <li>
+                            <button class="nav-login-register" title="注册悦旅行" type="button">
+                                注册
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 登录弹出窗口 -->
+                <div class="login-box" style="visibility:hidden;opacity: 0">
+                    <div class="login-title">
+                        登录
+                        <span>
+                            没有账号？
+                            <a href="注册.html" target="_blank">
+                                立即注册>
+                            </a>
+                            <a>
+                                <i class="iconfont icon-chahao">
+                                </i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="login-content">
+                        <form action="" autocomplete="on" method="post">
+                            <fieldset>
+                                <input class="form-control" name="" pattern="^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[a-zA-Z]{2,4}$" placeholder="邮箱" required="required" type="email" value="">
+                                    <input class="form-control" name="" oninput="setCustomValidity('')" oninvalid="setCustomValidity('至少包含字母和数字，最短8个字符，区分大小写')" pattern="^[a-zA-Z0-9]{6,16}$" placeholder="密码" required="required" type="password" value="">
+                                        <label for="">
+                                            <input name="" type="checkbox" value="">
+                                                记住密码
+                                            </input>
+                                        </label>
+                                        <button type="">
+                                            登录
+                                        </button>
+                                    </input>
+                                </input>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="login-quick">
+                        <p>
+                            使用合作账号快速登录
+                        </p>
+                        <br>
+                            <div>
+                                <a href="javascript:void(0)">
+                                    <img alt="" height="16" src="images/weibo.png" width="20">
+                                        新浪微博
+                                    </img>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img alt="" height="16" src="images/qq.png" width="16">
+                                        QQ
+                                    </img>
+                                </a>
+                            </div>
+                        </br>
+                    </div>
+                </div>
+                <!-- 建议栏弹出窗口 -->
+                <div class="suggestion-box" style="visibility:hidden;opacity: 0">
+                    <div class="suggestion-title">
+                        意见反馈
+                        <a>
+                            <i class="iconfont icon-chahao">
+                            </i>
+                        </a>
+                    </div>
+                    <div class="suggestion-content">
+                        <form action="" method="post">
+                            <fieldset>
+                                <textarea name="" placeholder="写下您的意见">
+                                </textarea>
+                                <input class="form-control" name="" placeholder="您的email或QQ" type="text" value="">
+                                </input>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="suggestion-control">
+                        <button class="suggestion-cancel" title="登陆悦旅行" type="button">
+                            取消
+                        </button>
+                        <button class="suggestion-conform" title="注册悦旅行" type="button">
+                            确认
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- 弹出窗背后的遮罩层 -->
+        <div class="login-mask" onselectstart="return false" style="display: none;">
+        </div>
+        <!-- 轮播部分 -->
+        <div class="carousel hidden-sm hidden-xs">
+            <div class="carousel-img" style="font-size:0;left:-100%;">
+                <img alt="栏目：探美食" height="400" src="images/carousel/carousel-img-5.jpg" width="1440">
+                    <img alt="栏目：趣城外" height="400" src="images/carousel/carousel-img-1.jpg" width="1440">
+                        <img alt="栏目：趣城外" height="400" src="images/carousel/carousel-img-2.jpg" width="1440">
+                            <img alt="栏目：城里逛" height="400" src="images/carousel/carousel-img-3.jpg" width="1440">
+                                <img alt="专题：悦旅行与你一起，不辜负每个周末的好时光" height="400" src="images/carousel/carousel-img-4.jpg" width="1440">
+                                    <img alt="栏目：探美食" height="400" src="images/carousel/carousel-img-5.jpg" width="1440">
+                                        <img alt="栏目：趣城外" height="400" src="images/carousel/carousel-img-1.jpg" width="1440">
+                                        </img>
+                                    </img>
+                                </img>
+                            </img>
+                        </img>
+                    </img>
+                </img>
+            </div>
+            <div class="carousel-button">
+                <span index="1">
+                </span>
+                <span index="2">
+                </span>
+                <span index="3">
+                </span>
+                <span index="4">
+                </span>
+                <span index="5">
+                </span>
+            </div>
+            <a class="carousel-prev" href="javascript:void(0)">
+                <i class="iconfont icon-xiangzuo1">
+                </i>
+            </a>
+            <a class="carousel-next" href="javascript:void(0)">
+                <i class="iconfont icon-xiangyou1">
+                </i>
+            </a>
+        </div>
+        <!-- 主体内容 包括两栏-->
+        <div class="main container">
+            <div class="main-content col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
+                <div class="main-hottest hidden-sm hidden-xs">
+                    <div class="title">
+                        热门城市周刊
+                        <a class="text-muted" href="javascript:void(0)">
+                            <span>
+                                景多图美，尽情观赏！
+                            </span>
+                            <span class="text-right">
+                                更多
+                                <i class="iconfont icon-youjiantou">
+                                </i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="main-hottest-img col-md-3 col-lg-3">
+                        <a href="javascript:void(0)">
+                            <img alt="" class="img-responsive" height="376" src="images/main-hottest/image1.jpg" width="251"/>
+                        </a>
+                    </div>
+                    <div class="main-hottest-img col-md-3 col-lg-3">
+                        <a href="javascript:void(0)">
+                            <img alt="" class="img-responsive" height="376" src="images/main-hottest/image2.jpg" width="251"/>
+                        </a>
+                    </div>
+                    <div class="main-hottest-img col-md-3 col-lg-3">
+                        <a href="javascript:void(0)">
+                            <img alt="" class="img-responsive" height="376" src="images/main-hottest/image3.jpg" width="251"/>
+                        </a>
+                    </div>
+                    <div class="main-hottest-img col-md-3 col-lg-3">
+                        <a href="javascript:void(0)">
+                            <img alt="" class="img-responsive" height="376" src="images/main-hottest/image4.jpg" width="251"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="main-newest">
+                    <div class="title">
+                        最新发表
+                    </div>
+                    <div class="main-newest-list col-lg-6 col-md-6 col-xs-12">
+                        <a href="javascript:void(0)">
+                            <img alt="" height="240" src="images/main-newest/image1.png" width="360"/>
+                        </a>
+                        <div>
+                            <p>
+                                <a href="javascript:void(0)">
+                                    探美食
+                                </a>
+                            </p>
+                            <h3>
+                                <a href="javascript:void(0)">
+                                    舌尖上的香港
+                                </a>
+                            </h3>
+                            <p class="text-right">
+                                <a href="javascript:void(0)">
+                                    悦旅行
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-newest-list col-lg-6 col-md-6 col-xs-12">
+                        <a href="javascript:void(0)">
+                            <img alt="" height="240" src="images/main-newest/image2.jpg" width="360"/>
+                        </a>
+                        <div>
+                            <p>
+                                <a href="javascript:void(0)">
+                                    探美食
+                                </a>
+                            </p>
+                            <h3>
+                                <a href="javascript:void(0)">
+                                    爱，就是在一起吃早餐
+                                </a>
+                            </h3>
+                            <p class="text-right">
+                                <a href="javascript:void(0)">
+                                    悦旅行
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-newest-list col-lg-6 col-md-6 col-xs-12">
+                        <a href="javascript:void(0)">
+                            <img alt="" height="240" src="images/main-newest/image3.jpg" width="360"/>
+                        </a>
+                        <div>
+                            <p>
+                                <a href="javascript:void(0)">
+                                    探美食
+                                </a>
+                            </p>
+                            <h3>
+                                <a href="javascript:void(0)">
+                                    全国十大美食小街 你去过几条
+                                </a>
+                            </h3>
+                            <p class="text-right text-muted">
+                                <a href="javascript:void(0)">
+                                    悦旅行
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-newest-list col-lg-6 col-md-6 col-xs-12">
+                        <a href="javascript:void(0)">
+                            <img alt="" height="240" src="images/main-newest/image4.png" width="360"/>
+                        </a>
+                        <div>
+                            <p class="text-muted">
+                                <a href="javascript:void(0)">
+                                    探美食
+                                </a>
+                            </p>
+                            <h3>
+                                <a href="javascript:void(0)">
+                                    干燥渐寒的秋夜，来一碗热汤
+                                </a>
+                            </h3>
+                            <p class="text-right text-muted">
+                                <a href="javascript:void(0)">
+                                    悦旅行
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-newest-list col-lg-6 col-md-6 col-xs-12">
+                        <a href="javascript:void(0)">
+                            <img alt="" height="240" src="images/main-newest/image5.jpg" width="360"/>
+                        </a>
+                        <div>
+                            <p class="text-muted">
+                                <a href="javascript:void(0)">
+                                    探美食
+                                </a>
+                            </p>
+                            <h3>
+                                <a href="javascript:void(0)">
+                                    高逼格！无花果竟可以这样
+                                </a>
+                            </h3>
+                            <p class="text-right text-muted">
+                                <a href="javascript:void(0)">
+                                    悦旅行
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-newest-list col-lg-6 col-md-6 col-xs-12">
+                        <a href="javascript:void(0)">
+                            <img alt="" height="240" src="images/main-newest/image6.jpg" width="360"/>
+                        </a>
+                        <div>
+                            <p class="text-muted">
+                                <a href="javascript:void(0)">
+                                    探美食
+                                </a>
+                            </p>
+                            <h3>
+                                <a href="javascript:void(0)">
+                                    在美国自驾，不可错过的美食
+                                </a>
+                            </h3>
+                            <p class="text-right text-muted">
+                                <a href="javascript:void(0)">
+                                    悦旅行
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-newest-list col-lg-6 col-md-6 col-xs-12">
+                        <a href="javascript:void(0)">
+                            <img alt="" height="240" src="images/main-newest/image7.jpg" width="360"/>
+                        </a>
+                        <div>
+                            <p class="text-muted">
+                                <a href="javascript:void(0)">
+                                    探美食
+                                </a>
+                            </p>
+                            <h3>
+                                <a href="javascript:void(0)">
+                                    有个吃货女朋友是什么样的体验
+                                </a>
+                            </h3>
+                            <p class="text-right text-muted">
+                                <a href="javascript:void(0)">
+                                    悦旅行
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-newest-list col-lg-6 col-md-6 col-xs-12">
+                        <a href="javascript:void(0)">
+                            <img alt="" height="240" src="images/main-newest/image8.jpg" width="360"/>
+                        </a>
+                        <div>
+                            <p class="text-muted">
+                                <a href="javascript:void(0)">
+                                    探美食
+                                </a>
+                            </p>
+                            <h3>
+                                <a href="javascript:void(0)">
+                                    上海|LINE Cafe:最萌咖啡
+                                </a>
+                            </h3>
+                            <p class="text-right text-muted">
+                                <a href="javascript:void(0)">
+                                    悦旅行
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-newest-list col-lg-6 col-md-6 col-xs-12">
+                        <a href="javascript:void(0)">
+                            <img alt="" height="240" src="images/main-newest/image9.jpg" width="360"/>
+                        </a>
+                        <div>
+                            <p class="text-muted">
+                                <a href="javascript:void(0)">
+                                    探美食
+                                </a>
+                            </p>
+                            <h3>
+                                <a href="javascript:void(0)">
+                                    吃遍宜家，开启北欧食旅
+                                </a>
+                            </h3>
+                            <p class="text-right text-muted">
+                                <a href="javascript:void(0)">
+                                    悦旅行
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-newest-list col-lg-6 col-md-6 col-xs-12">
+                        <a href="javascript:void(0)">
+                            <img alt="" height="240" src="images/main-newest/image10.jpg" width="360"/>
+                        </a>
+                        <div>
+                            <p class="text-muted">
+                                <a href="javascript:void(0)">
+                                    探美食
+                                </a>
+                            </p>
+                            <h3>
+                                <a href="javascript:void(0)">
+                                    10种好食材值得你为其远行
+                                </a>
+                            </h3>
+                            <p class="text-right text-muted">
+                                <a href="javascript:void(0)">
+                                    悦旅行
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="center main-newest-load">
+                        <button class="main-newest-btn" type="" >
+                            继续加载
+                        </button>
+                    </div>
+                    <div class="main-collection">
+                        <div class="title">
+                            <span>
+                                <a href="">
+                                    主题栏目
+                                </a>
+                            </span>
+                            <a href="javascript:void(0)"><span class="text-right">
+                                更多
+                                <i class="iconfont icon-youjiantou">
+                                </i>
+                            </span>
+                            </a>
+                        </div>
+                        <div class=" col-lg-3 col-md-3 col-xs-6">
+                            <div class="main-collection-img">
+                                <img alt="" height="345" src="images/main-collection/image1.jpg" width="230">
+                                    <div class="main-collection-half">
+                                        <h3>
+                                            <a href="javascript:void(0)">
+                                                毕业去旅行 —— 青春就是永不回头
+                                            </a>
+                                        </h3>
+                                        <p>
+                                            <a href="javascript:void(0)">
+                                                悦旅行
+                                            </a>
+                                            主编，共0篇
+                                        </p>
+                                    </div>
+                                </img>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-6">
+                            <div class="main-collection-img">
+                                <img alt="" height="345" src="images/main-collection/image1.jpg" width="230">
+                                    <div class="main-collection-half">
+                                        <h3>
+                                            <a href="javascript:void(0)">
+                                                毕业去旅行 —— 青春就是永不回头
+                                            </a>
+                                        </h3>
+                                        <p>
+                                            <a href="javascript:void(0)">
+                                                悦旅行
+                                            </a>
+                                            主编，共0篇
+                                        </p>
+                                    </div>
+                                </img>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-6">
+                            <div class="main-collection-img">
+                                <img alt="" height="345" src="images/main-collection/image2.jpg" width="230">
+                                    <div class="main-collection-half">
+                                        <h3>
+                                            <a href="javascript:void(0)">
+                                                拼途召集令
+                                            </a>
+                                        </h3>
+                                        <p>
+                                            <a href="javascript:void(0)">
+                                                悦旅行
+                                            </a>
+                                            主编，共1篇
+                                        </p>
+                                    </div>
+                                </img>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-6">
+                            <div class="main-collection-img">
+                                <img alt="" height="345" src="images/main-collection/image3.jpg" width="230">
+                                    <div class="main-collection-half">
+                                        <h3>
+                                            <a href="javascript:void(0)">
+                                                悦旅行之家
+                                            </a>
+                                        </h3>
+                                        <p>
+                                            <a href="javascript:void(0)">
+                                                悦旅行
+                                            </a>
+                                            主编，共12篇
+                                        </p>
+                                    </div>
+                                </img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 侧边栏 -->
+            <aside class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+                <div class="aside-promotion">
+                    想好周末去哪玩了么？
+                    <br/>
+                        <br/>
+                            我们与生活家一起，为小伙伴们提供城内城外玩家级休闲方案。
+                            <br/>
+                                <br/>
+                                    相信每个周末的美好时光都不会被辜负。
+                                <br/>
+                    <br/>
+                </div>
+                <div class="aside-collection">
+                    <img alt="" height="240" src="images/collection.jpg" width="360">
+                        <div>
+                            <h5>
+                                <a href="javascript:void(0)">
+                                    专题
+                                </a>
+                            </h5>
+                            <hr>
+                                <h2>
+                                    <a href="javascript:void(0)">
+                                        寻找中国最美冬季
+                                    </a>
+                                </h2>
+                                <small>
+                                    <a href="javascript:void(0)">
+                                        悦旅行 主编 ，共五篇
+                                    </a>
+                                </small>
+                            </hr>
+                        </div>
+                    </img>
+                </div>
+                <div class="aside-ad hidden-sm hidden-xs">
+                    <a href="javascript:void(0)">
+                        <img alt="" height="410" src="images/ad.png" width="320"/>
+                    </a>
+                </div>
+            </aside>
+        </div>
+        <!-- 页脚 -->
+        <footer class="hidden-sm hidden-xs col-lg-12 col-md-12">
+            <p>
+                <a href="javascript:void(0)">
+                    关于我们 .
+                </a>
+                <a href="javascript:void(0)">
+                    联系我们 .
+                </a>
+                <a href="javascript:void(0)">
+                    加入我们 ·
+                </a>
+                <a href="javascript:void(0)">
+                    服务协议 ·
+                </a>
+                <a href="javascript:void(0)">
+                    帮助中心 ·
+                </a>
+                <a href="javascript:void(0)">
+                    App ·
+                </a>
+                <a href="javascript:void(0)">
+                    订阅
+                </a>
+            </p>
+            <p>
+                ©2012-2013 悦旅行版权所有 浙ICP备09000768号-5
+            </p>
+        </footer>
+        <!-- 移动端底部导航 -->
+        <div class="nav-bottom visible-sm">
+            <button>
+                <i class="iconfont icon-xiangzuo1">
+                </i>
+                后退
+            </button>
+            <button>
+                前进
+                <i class="iconfont icon-xiangyou1">
+                </i>
+            </button>
+            <a class="text-right" href="#top">
+                首页
+            </a>
+        </div>
+        <!-- 始终至于页面底部的按钮集 -->
+        <div class="buttons hidden-sm hidden-xs">
+            <a class="suggestion-btn" href="javascript:void(0)">
+                <i class="iconfont icon-yijian">
+                </i>
+            </a>
+            <a class="erwei-btn" href="javascript:void(0)">
+                <i class="iconfont icon-erweima">
+                </i>
+            </a>
+            <a class="goTop">
+                <i class="iconfont icon-zhidingbu">
+                </i>
+            </a>
+            <div class="erwei" style="display: none">
+                <div class="erwei-title">
+                    <p>
+                        悦旅行官方微信
+                    </p>
+                </div>
+                <div class="erwei-img">
+                    <img alt="" src="images/erweima.jpg"/>
+                </div>
+            </div>
+        </div>
+        <script src="scripts/main.js">
+        </script>
+    </body>
+</html>

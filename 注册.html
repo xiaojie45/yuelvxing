@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta content="IE=edge" http-equiv="X-UA-Compatible">
+                <title>
+                </title>
+                <link href="css/base.css" rel="stylesheet">
+                </link>
+                <style>
+                body {
+                    overflow: hidden;
+                    vertical-align: middle;
+                    }
+                    </style>
+            </meta>
+        </meta>
+    </head>
+    <body style="background-image: url('images/register-bg.jpg');background-size:cover; background-attachment: fixed;background-position: 50% 0">
+        <div class="register-page">
+            <div class="register-main">
+                <div class="login-logo col-lg-6 col-md-6 col-sm-6 hidden-xs">
+                    <p>
+                        <a href="javascript:void(0)">
+                            <img alt="" height="30" src="images/logo.png" width="87"/>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="javascript:void(0)">
+                            <img alt="" height="26" src="images/slogen.png" width="200"/>
+                        </a>
+                    </p>
+                </div>
+                <div class="register-box col-lg-6 col-md-6 col-sm-6">
+                    <div class="register-title">
+                        注册
+                        <span>
+                            已有账号？
+                            <a href="登录.html">
+                                立即登陆>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="register-content">
+                        <form action="" autocomplete="on" method="post">
+                            <fieldset>
+                                <input class="form-control userName" name="username" pattern="^[-_a-zA-Z0-9\u4e00-\u9fa5]{4,30}$" placeholder="昵称" required="required" type="text" value=""/>
+                                <span class="text-muted name-tip">
+                                    数字、字母、中文 4-30个字符
+                                </span>
+                                <input class="form-control userEmail" name="" pattern="^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[a-zA-Z]{2,4}$" placeholder="邮箱" required="required" type="email" value=""/>
+                                <span class="text-muted email-tip">
+                                    用来登录悦旅行，接收到激活邮件才能使用更多功能
+                                </span>
+                                <input class="form-control userPassword" name="" pattern="^[a-zA-Z0-9]{6,16}$" placeholder="密码" required="required" type="password" value=""/>
+                                <span class="text-muted password-tip">
+                                    至少包含字母和数字，最短8个字符，区分大小写
+                                </span>
+                                <label for="">
+                                    <input name="" type="checkbox" value="">
+                                        同意悦旅行《使用协议》
+                                    </input>
+                                </label>
+                                <button class="register-btn" type="">
+                                    注册
+                                </button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="register-quick">
+                        <p>
+                            使用合作账号快速登录
+                        </p>
+                        <br>
+                            <div>
+                                <a href="javascript:void(0)">
+                                    <img src="images/weibo.png">
+                                        新浪微博
+                                    </img>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img src="images/qq.png">
+                                        QQ
+                                    </img>
+                                </a>
+                            </div>
+                        </br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var $ = function(id){
+            return document.querySelector(id);
+        };
+
+        var nameTip = $('.name-tip'),
+            emailTip = $('.email-tip'),
+            passwordTip = $('.password-tip'),
+            userName = $('.userName'),
+            userEmail = $('.userEmail'),
+            userPassword = $('.userPassword');
+
+        function show(el){
+            el.style.display = 'block';
+        }
+
+        userName.onfocus = function(){
+            show(nameTip);
+        };
+        userEmail.onfocus = function(){
+            show(emailTip);
+        };
+        userPassword.onfocus = function(){
+            show(passwordTip);
+        };
+
+        function hide(el){
+            el.style.display = 'none';
+        }
+
+        userName.onblur = function(){
+            hide(nameTip);
+        };
+        userEmail.onblur = function(){
+            hide(emailTip);
+        };
+        userPassword.onblur = function(){
+            hide(passwordTip);
+        };
+
+
+        userName.oninput= function(){
+            userName.setCustomValidity('');
+        };
+        userEmail.oninput= function(){
+            userEmail.setCustomValidity('');
+        };
+        userPassword.oninput= function(){
+            userPassword.setCustomValidity('');
+        };
+
+        userName.oninvalid= function(){
+            userName.setCustomValidity('纳尼！错了哦！要4-30个数字、字母、中文字符！');
+        };
+        userEmail.oninvalid= function(){
+             userEmail.setCustomValidity('OMG！这不是正确的邮箱！')
+        };
+        userPassword.oninvalid= function(){
+            userPassword.setCustomValidity('亲，密码要包含至少8个字母或数字字符哦！');
+        };
+        </script>
+    </body>
+</html>
