@@ -1,29 +1,27 @@
-
 <?php
 $json = '{
 	"art":[{
-	"img":"image1",
+	"img":"image11",
 	"topic":"探美食",
-	"title":"上海|LINE Cafe:最萌咖啡",
+	"title":"方便的最高逼格吃法",
 	"creator":"悦旅行"
 	},{
-	"img":"image6",
+	"img":"image12",
 	"topic":"探美食",
-	"title":"吃遍宜家，开启北欧食旅",
+	"title":"香港｜一兰：高级拉面体验",
+	"creator":"悦旅行"
+	},{
+	"img":"image13",
+	"topic":"探美食",
+	"title":"集齐这 10 个国家的麦当劳汉堡",
+	"creator":"悦旅行"
+	},{
+	"img":"image14",
+	"topic":"探美食",
+	"title":"上海 | The Nest：西式“居酒屋”",
 	"creator":"悦旅行"
 	}]
 }';
- // var strHtml = '';
-    //  for (var i = 0; i < len; i++) {
-    //     var art = data.arts[i];
-    //     strHtml += '<div class="main-newest-list col-lg-6 col-md-6 col-xs-12">';
-    //     strHtml += '<a href="javascript:void(0)"><img alt="" height="240" src="images/main-newest/'+art.img+'.jpg" width="360"/></a>';
-    //     strHtml += '<div>';
-    //     strHtml += '<p class="text-muted"><a href="javascript:void(0)">'+art.topic+'</a></p>';
-    //     strHtml += '<h3><a href="javascript:void(0)">'+art.title+'</a></h3>';
-    //     strHtml += '<p class="text-right text-muted"><a href="javascript:void(0)">'+art.creator+'</a></p>';
-    //     strHtml += ' </div></div>';
-    //  }
 
 	echo $json;
 ?>
