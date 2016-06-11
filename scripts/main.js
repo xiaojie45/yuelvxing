@@ -223,54 +223,42 @@ var navList = $('.nav-list'),
         }
     }
 
-var json = {
-    "art":[{
-    "img":"image1",
-    "topic":"探美食",
-    "title":"上海|LINE Cafe:最萌咖啡",
-    "creator":"悦旅行"
-    },{
-    "img":"image6",
-    "topic":"探美食",
-    "title":"吃遍宜家，开启北欧食旅",
-    "creator":"悦旅行"
-    }]
-};
+var json = '{"art":[{"img":"image1","topic":"探美食","title":"上海|LINE Cafe:最萌咖啡","creator":"悦旅行"},{"img":"image6","topic":"探美食","title":"吃遍宜家，开启北欧食旅","creator":"悦旅行"}]}';
 
 // 继续加载按钮Ajax返回
 $('.main-newest-btn').onclick = function(){
     $('.main-newest-btn').innerHTML = "努力加载中...";
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function(){
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-           var data = xmlhttp.responseText;
-           // var len = data.art.length;
-        alert(json.art[0].img);
-            // alert(xmlhttp.responseText);
-          // $('.main-newest').appendChild(xmlhttp.responseText[0][0]);
-        }
-    }
-    // alert(data['art']);
-
     xmlhttp.open("GET","getarts.php",true);
     xmlhttp.send();
+    xmlhttp.onreadystatechange = function(){
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var data = JSON.parse(xmlhttp.responseText);
 
-    
-    // var strHtml = '';
-    //  for (var i = 0; i < len; i++) {
-    //     var art = data.arts[i];
-    //     strHtml += '<div class="main-newest-list col-lg-6 col-md-6 col-xs-12">';
-    //     strHtml += '<a href="javascript:void(0)"><img alt="" height="240" src="images/main-newest/'+art.img+'.jpg" width="360"/></a>';
-    //     strHtml += '<div>';
-    //     strHtml += '<p class="text-muted"><a href="javascript:void(0)">'+art.topic+'</a></p>';
-    //     strHtml += '<h3><a href="javascript:void(0)">'+art.title+'</a></h3>';
-    //     strHtml += '<p class="text-right text-muted"><a href="javascript:void(0)">'+art.creator+'</a></p>';
-    //     strHtml += ' </div></div>';
-    //  }
+            var len = data.art.length;
 
-    //  $('.main-newest').appendChild(strHtml);
-    //  $('.main-newest-btn').innerHTML = "加载完毕";
+            var strHtml = '';
+            for (var i = 0; i < len; i++) {
+                var art = data.art[i];
+                strHtml += '<div class="main-newest-list col-lg-6 col-md-6 col-xs-12">';
+                strHtml += '<a href="javascript:void(0)"><img alt="" height="240" src="images/main-newest/'+art.img+'.jpg" width="360"/></a>';
+                strHtml += '<div>';
+                strHtml += '<p class="text-muted"><a href="javascript:void(0)">'+art.topic+'</a></p>';
+                strHtml += '<h3><a href="javascript:void(0)">'+art.title+'</a></h3>';
+                strHtml += '<p class="text-right text-muted"><a href="javascript:void(0)">'+art.creator+'</a></p>';
+                strHtml += ' </div></div>';
+             }
+            var node = document.createElement("div");
+            node.innerHTML = strHtml;
+            $('.main-newest').appendChild(node);
+            $('.main-newest').appendChild($('.main-newest-load'));
+            $('.main-newest-btn').innerHTML = "加载完毕";
+            $('.main-newest-btn').onclick = null;
 
+        }
+    }
+    xmlhttp.open("GET","getarts.php",true);
+    xmlhttp.send();
 }
 
 
