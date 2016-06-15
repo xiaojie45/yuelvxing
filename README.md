@@ -7,5 +7,8 @@
 <li>网站的登录、建议弹出窗口，到顶部按钮，移动端导航栏按钮均用到了CSS3的动画功能</li><br>
 <li>在注册页面，使用了HTML5的表单验证功能，可以在客户端预先验证用户输入是否正确，降低服务器的压力</li><br>
 <li>网站较小的图片、符号使用的是图片字体，图片字体从iconfont网站自定义，与font awesome相比显著降低了图片字体的大小</li><br>
-<li>使用grunt实现前端工程化，实现压缩，js检查，监听，sass自动编译css等功能的自动化</li>
+<li>使用grunt实现前端工程化，实现压缩，js检查，监听，sass自动编译css等功能的自动化</li><br>
+<li>在线看主页效果 http://htmlpreview.github.io/?https://github.com/xiaojie45/yuelvxing/blob/master/index.html</li><br>
+<li>在线看注册页效果 http://htmlpreview.github.io/?https://github.com/xiaojie45/yuelvxing/blob/master/%E6%B3%A8%E5%86%8C.html</li><br>
+<li>在线看登录页效果 http://htmlpreview.github.io/?https://github.com/xiaojie45/yuelvxing/blob/master/%E7%99%BB%E5%BD%95.html</li>
 </ol>
