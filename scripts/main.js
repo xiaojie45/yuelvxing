@@ -65,7 +65,11 @@ erweiBtn.onmouseleave = function() {
 };
 // 更多按钮显示框切换
 function toggle(el, event) {
-    el.style.display == 'block' ? hide(el) : show(el);
+    if(el.style.display == 'block'){
+        hide(el);
+    } else {
+        show(el);
+    }
     event.stopPropagation();
 }
 $('.more').onclick = function(e) {
@@ -91,10 +95,10 @@ goTop.onclick = function() {
         var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
         var speed = 200;
         document.documentElement.scrollTop = document.body.scrollTop = scrollHeight - speed;
-        if (scrollHeight == 0) {
+        if (scrollHeight === 0) {
             clearInterval(timer);
         }
-    }, 30)
+    }, 30);
 };
 // 轮播图代码
 var carousel = $('.carousel'),
@@ -112,7 +116,7 @@ function showButton() {
             buttons[i].className = '';
             break;
         }
-    };
+    }
     buttons[index - 1].className = 'on';
 }
 
@@ -122,7 +126,11 @@ function animate(n) {
         interval = 5,
         speed,
         animated = true;
-    n > 0 ? speed = 100 / interval : speed = -100 / interval;
+        if(n > 0){
+            speed = 100 / interval;
+        }else{
+            speed = -100 / interval;
+        }
 
     function go() {
         if ((n < 0 && parseInt(carouselImg.style.left) > newLeft) || n > 0 && parseInt(carouselImg.style.left) < newLeft) {
@@ -162,11 +170,11 @@ prev.onclick = function() {
         animate(1);
     }
 };
-for (var i = 0; i < buttons.length; i++) {
-    buttons[i].onclick = function() {
+
+function buttonColor() {
         if (this.className == 'on') {
             return;
-        };
+        }
         var myN = parseInt(this.getAttribute('index'));
         if (!animated) {
             animate(-myN + index);
@@ -174,12 +182,15 @@ for (var i = 0; i < buttons.length; i++) {
         index = myN;
         showButton();
     }
-};
+
+for (var i = 0; i < buttons.length; i++) {
+    buttons[i].onclick = buttonColor;
+}
 
 function play() {
     timer = setInterval(function() {
         next.onclick();
-    }, 5000)
+    }, 5000);
 }
 
 function stop() {
@@ -214,14 +225,14 @@ var navList = $('.nav-list'),
     $('.xs-btn').onclick = function(){
         var h = 0;
 
-        if(getComputedStyle(navBar)['height'] =='0px' ){
+        if(getComputedStyle(navBar).height=='0px' ){
             navBar.style.height = h;
             navBar.style.display = 'block';
             addHeight();
         } else if(getComputedStyle(navBar).display =='block'){
             reduceHeight();
         }
-    }
+    };
 
 var json = '{"art":[{"img":"image1","topic":"探美食","title":"上海|LINE Cafe:最萌咖啡","creator":"悦旅行"},{"img":"image6","topic":"探美食","title":"吃遍宜家，开启北欧食旅","creator":"悦旅行"}]}';
 
@@ -256,9 +267,9 @@ $('.main-newest-btn').onclick = function(){
             $('.main-newest-btn').onclick = null;
 
         }
-    }
+    };
     xmlhttp.open("GET","getarts.php",true);
     xmlhttp.send();
-}
+};
 
 
