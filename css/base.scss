@@ -197,6 +197,11 @@ body
 .container
 {
     @include hCenter(1170px);
+    overflow: hidden;
+}
+
+.container,.container1 {
+  margin: 0 auto;
 }
 
 .nav
@@ -974,7 +979,7 @@ footer
     {
         display: none !important;
     }
-    .container
+    .container,.container1
     {
         width: 1170px;
     }
@@ -983,7 +988,7 @@ footer
 
 @media screen and (max-width: 1199px)
 {
-    .container
+    .container,.container1
     {
         width: 970px;
     }
@@ -1001,7 +1006,7 @@ footer
 
 @media screen and (max-width: 991px)
 {
-    .container
+    .container,.container1
     {
         width: 750px;
     }
@@ -1028,7 +1033,7 @@ footer
 
 @media screen and (max-width: 778px)
 {
-    .container
+    .container,.container1
     {
         width: 100%;
     }
@@ -1091,6 +1096,7 @@ footer
         width: 100%;
         margin: 0 auto;
     }
+
 
     .register-box
     {
